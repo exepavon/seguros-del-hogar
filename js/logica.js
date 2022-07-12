@@ -25,6 +25,11 @@ const cotizarSeguroVivienda = ()=> {
             valorDeLaCuota = valorDeLaCuota.toFixed(2)
             valorCuota.innerText = `$ ${valorDeLaCuota}`
     } else {
-        alert("Complete todos los datos solicitados.")
+        Swal.fire({
+            icon: 'error',
+            title: 'error',
+            text: 'todos los campos son obligatorios',
+            showConfirmButton:'cool'
+        })
     }
 }
